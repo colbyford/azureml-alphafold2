@@ -4,7 +4,7 @@
 
 
 ## Docker Image Creation
-First, build the custom Azure ML Docker image (with the required dependencies for the MMAE sensitivity model's preprocessing).
+First, build the custom Azure ML Docker image (with the required dependencies for the AlphaFold2 system).
 ```sh
 docker build -t alphafold2_aml --build-arg IMAGE_VERSION=$(git rev-parse --short HEAD) .
 
