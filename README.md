@@ -13,7 +13,7 @@ Companion repository for Medium Post: [How to predict many protein structures wi
 - Dockerfile: [Dockerfile](Dockerfile)
 
 
-## Docker Image Creation
+### Docker Image Creation
 
 The custom Docker image for running ColabFold in Azure ML HyperDrive is available on Docker Hub at https://hub.docker.com/r/cford38/alphafold2_aml. If you'd like to build the image for yourself, follow the instructions below.
 
