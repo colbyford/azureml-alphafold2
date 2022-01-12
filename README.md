@@ -3,7 +3,20 @@
 <h3 align="right">Colby T. Ford, Ph.D.</h3>
 
 
+![](img/header.png)
+
+Companion repository for Medium Post: [How to predict many protein structures with AlphaFold2 at-scale in Azure Machine Learning](https://colbyford.medium.com/how-to-predict-many-protein-structures-with-alphafold2-at-scale-in-azure-machine-learning-c1e0ece4e99f).
+
+## Resources:
+- Jupyter Notebook: [AzureML_AlphaFold2_HyperDrive.ipynb](AzureML_AlphaFold2_HyperDrive.ipynb)
+- Sample Sequence FASTA: [sequences.fasta](sequences.fasta)
+- Dockerfile: [Dockerfile](Dockerfile)
+
+
 ## Docker Image Creation
+
+The custom Docker image for running ColabFold in Azure ML HyperDrive is available on Docker Hub at https://hub.docker.com/r/cford38/alphafold2_aml. If you'd like to build the image for yourself, follow the instructions below.
+
 First, build the custom Azure ML Docker image (with the required dependencies for the AlphaFold2 system).
 ```sh
 docker build -t alphafold2_aml --build-arg IMAGE_VERSION=$(git rev-parse --short HEAD) .
