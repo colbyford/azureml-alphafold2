@@ -5,7 +5,7 @@
 
 ![](img/header.png)
 
-Companion repository for Medium Post: [How to predict many protein structures with AlphaFold2 at-scale in Azure Machine Learning](https://colbyford.medium.com/how-to-predict-many-protein-structures-with-alphafold2-at-scale-in-azure-machine-learning-c1e0ece4e99f).
+- Companion repository for Medium Post: [How to predict many protein structures with AlphaFold2 at-scale in Azure Machine Learning](https://colbyford.medium.com/how-to-predict-many-protein-structures-with-alphafold2-at-scale-in-azure-machine-learning-c1e0ece4e99f).
 
 ## Resources:
 - Jupyter Notebook: [AzureML_AlphaFold2_HyperDrive.ipynb](AzureML_AlphaFold2_HyperDrive.ipynb)
