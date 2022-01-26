@@ -34,7 +34,6 @@ docker push <USERNAME>/alphafold2_aml:latest
 # docker push cford38/alphafold2_aml:latest
 ```
 
-
 To push the image to an Azure Container Registry, run the following:
 ```sh
 az login
