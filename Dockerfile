@@ -1,6 +1,7 @@
 # FROM mcr.microsoft.com/azureml/xgboost-0.9-ubuntu18.04-py37-cpu-inference:latest
 # FROM mcr.microsoft.com/azureml/openmpi3.1.2-ubuntu16.04
-FROM mcr.microsoft.com/azureml/pytorch-1.9-ubuntu18.04-py37-cuda11.0.3-gpu-inference:latest
+# FROM mcr.microsoft.com/azureml/pytorch-1.9-ubuntu18.04-py37-cuda11.0.3-gpu-inference:latest
+FROM mcr.microsoft.com/azureml/openmpi3.1.2-cuda10.2-cudnn7-ubuntu18.04
 
 ENV DEBIAN_FRONTEND noninteractive
 USER root
@@ -14,7 +15,7 @@ RUN apt-get update && \
     apt-get -y install g++ gcc git
 
 RUN conda install -c r -y \
-    conda=4.8.3 \
+    conda \
     openssl=1.1.1c && \
     conda clean -ay
 
@@ -24,6 +25,13 @@ RUN pip install --no-cache-dir \
     azureml-core \
     azure-ml-api-sdk \
     azureml-train-automl-runtime
+
+## Install Torch
+RUN conda install -y -c pytorch \
+    cudatoolkit \
+    pytorch \
+    torchvision && \
+    conda clean -ya
 
 ## Install ColabFold 
 RUN pip install --no-warn-conflicts -q "colabfold[alphafold] @ git+https://github.com/sokrypton/ColabFold"
