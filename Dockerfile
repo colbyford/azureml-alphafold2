@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/azureml/openmpi3.1.2-cuda10.2-cudnn7-ubuntu18.04
 ENV DEBIAN_FRONTEND noninteractive
 USER root
 
-## Set an working directory for the MMAE ML resources
+## Set an working directory for the ML resources
 WORKDIR /alphafold2
 # RUN chmod 777 /alphafold2
 
