@@ -26,6 +26,7 @@ docker build -t alphafold2_aml --build-arg IMAGE_VERSION=$(git rev-parse --short
 ```
 
 To push the image to DockerHub, run the following:
+(If you'd like to use Azure Container Registry, see [this documentation](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli).)
 ```sh
 docker image tag alphafold2_aml <USERNAME>/alphafold2_aml:latest
 docker push <USERNAME>/alphafold2_aml:latest
